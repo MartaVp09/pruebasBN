@@ -1,1 +1,1 @@
-# pruebasBN
+# Batalla naval (Lógica y Pruebas)
