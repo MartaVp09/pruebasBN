@@ -19,7 +19,7 @@ describe("El juego...", function () {
 	});
 
 	it("Comprobar que los usuarios están en la partida", function () {
-		expect(partida.jugadores[0].nick).toEqual(user2.nick);
+		expect(partida.jugadores[0].nick).toEqual(user1.nick);
 		expect(partida.jugadores[1].nick).toEqual(user2.nick);
 	});
 
@@ -48,7 +48,8 @@ describe("El juego...", function () {
 		expect(user2.flota).toBeDefined();
 	
 		expect(user1.flota.length).toEqual(2);
-		expect(user2.flota.length).toEqual(4);
+
+		expect(user1.flota.nombre).toEqual("b2");
 	});
 
 	//que contienen agua (esAgua())

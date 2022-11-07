@@ -11,15 +11,31 @@
 		miJuego=new Juego();
 		miJuego.agregarUsuario("pepe");
 		miJuego.agregarUsuario("luis");
-		/*user1=miJuego.usuarios["pepe"];
-		user2=miJuego.usuarios["luis"];
-		let codigo = usr1.crearPartida();
-		usr2.unirseAPartida(codigo);*/
 		let res=miJuego.jugadorCreaPartida("pepe");
 		miJuego.jugadorSeUneAPartida("luis", res.codigo);
 		let user1 = miJuego.obtenerUsuario("pepe");
 		let user2 = miJuego.obtenerUsuario("luis");
 		let partida = miJuego.obtenerPartida(res.codigo);
+		user1.colocarBarco("b2",0,0); // 0 0 1 0
+		user1.colocarBarco("b4",0,1); // 0 1 1 1 2 1 3 1
+		user1.barcosDesplegados();
+		user2.colocarBarco("b2",0,0);
+		user2.colocarBarco("b4",0,1);
+		user2.barcosDesplegados();
+
+		user1.disparar(0,0);	//Tocado
+		user1.disparar(1,0);	//Hundido
+
+		user1.disparar(0,1);	//Tocado
+		user1.disparar(1,1);	//Tocado
+		user1.disparar(2,1);	//Tocado
+		user1.disparar(3,1);	//Hundido
+
+
+		//user2.disparar(0,0);	//No es tu turno
+		//user1.disparar(3,0);	//Agua
+		//user1.disparar(0,0);	//No es tu turno
+		//user1.disparar(0,1);
 	</script>
 </body>
 </html>
